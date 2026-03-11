@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/toolbar_bg"
+    android:paddingBottom="12dp">
+
+    <!-- Drag handle -->
+    <View
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/drag_handle"/>
+
+    <!-- ── Incognito ─────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/menuIncognito"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_incognito"
+            android:tint="?attr/colorControlNormal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="New Incognito Tab"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- ── Dark / Light Mode ─────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/menuDarkMode"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_dark_mode"
+            android:tint="?attr/colorControlNormal"/>
+
+        <TextView
+            android:id="@+id/darkModeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Dark Mode"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- ── Bookmarks ─────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/menuBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bookmark"
+            android:tint="?attr/colorControlNormal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Bookmarks"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- ── Desktop Mode ──────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/menuDesktop"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_desktop"
+            android:tint="?attr/colorControlNormal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Desktop Site"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- ── Share ─────────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/menuShare"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_share"
+            android:tint="?attr/colorControlNormal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Share"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/divider"/>
+
+    <!-- ── Clear Data ─────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/menuClearData"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/insecure_red"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="Clear Browsing Data"
+            android:textColor="@color/insecure_red"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

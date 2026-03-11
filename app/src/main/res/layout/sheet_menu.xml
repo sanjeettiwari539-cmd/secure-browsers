@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface"
+    android:paddingBottom="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/sheet_handle"
+        android:backgroundTint="@color/sheet_handle"/>
+
+    <!-- Dark Mode -->
+    <LinearLayout
+        android:id="@+id/menuDarkMode"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/selectableItemBackground">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🌙" android:textSize="20sp"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dark Mode" android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+            <TextView android:id="@+id/tvDarkModeStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dark Mode: OFF" android:textSize="12sp" android:textColor="?attr/colorOnSurfaceVariant"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Incognito -->
+    <LinearLayout
+        android:id="@+id/menuIncognito"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/selectableItemBackground">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🔒" android:textSize="20sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="New Incognito Tab" android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+    </LinearLayout>
+
+    <!-- Downloads -->
+    <LinearLayout
+        android:id="@+id/menuDownloads"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/selectableItemBackground">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="⬇️" android:textSize="20sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Downloads" android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+    </LinearLayout>
+
+    <!-- Share -->
+    <LinearLayout
+        android:id="@+id/menuShare"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/selectableItemBackground">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="📤" android:textSize="20sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Share Page" android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+    </LinearLayout>
+
+    <!-- Copy URL -->
+    <LinearLayout
+        android:id="@+id/menuCopyUrl"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/selectableItemBackground">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🔗" android:textSize="20sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Copy URL" android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+    </LinearLayout>
+
+    <!-- Clear Data -->
+    <LinearLayout
+        android:id="@+id/menuClearData"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/selectableItemBackground">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🗑️" android:textSize="20sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="Clear Browsing Data" android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+    </LinearLayout>
+
+    <!-- About -->
+    <LinearLayout
+        android:id="@+id/menuAbout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="?attr/selectableItemBackground">
+        <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="🛡️" android:textSize="20sp"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:text="About Secure Browser" android:textSize="15sp" android:textColor="?attr/colorOnSurface"/>
+    </LinearLayout>
+
+</LinearLayout>

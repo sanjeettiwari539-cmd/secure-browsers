@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Secure Browser</string>
+    <string name="search_hint">Search or enter address</string>
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <string name="refresh">Refresh/Stop</string>
+    <string name="menu">Menu</string>
+    <string name="home">Home</string>
+    <string name="incognito">Incognito</string>
+    <string name="incognito_active">🕵️ Incognito – No history, no trackers</string>
+    <string name="security">Security indicator</string>
+</resources>

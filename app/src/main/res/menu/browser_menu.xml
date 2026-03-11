@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_incognito"    android:title="Incognito Mode"/>
+    <item android:id="@+id/menu_dark_mode"    android:title="Dark Mode"/>
+    <item android:id="@+id/menu_desktop_site" android:title="Desktop Site"/>
+    <item android:id="@+id/menu_share"        android:title="Share Page"/>
+    <item android:id="@+id/menu_copy_url"     android:title="Copy URL"/>
+    <item android:id="@+id/menu_clear_data"   android:title="Clear Browsing Data"/>
+</menu>

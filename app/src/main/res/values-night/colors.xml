@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbarBackground">#202124</color>
+    <color name="urlBarBackground">#3C4043</color>
+    <color name="windowBackground">#18191A</color>
+    <color name="urlTextColor">#E8EAED</color>
+    <color name="hintColor">#9AA0A6</color>
+    <color name="iconTint">#9AA0A6</color>
+    <color name="dividerColor">#3C4043</color>
+    <color name="incognitoBackground">#2D2640</color>
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#111827">
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- INCOGNITO INDICATOR BAR                                   -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#1F2937"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_incognito"
+            android:tint="#A78BFA"
+            android:contentDescription="Incognito"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="  Incognito Mode — Not saved"
+            android:textColor="#A78BFA"
+            android:textSize="12sp"
+            android:textStyle="italic"/>
+
+        <!-- Close incognito button -->
+        <ImageButton
+            android:id="@+id/btnCloseIncognito"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_close"
+            android:tint="#A78BFA"
+            android:contentDescription="Close Incognito"
+            android:padding="7dp"/>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- URL BAR (dark theme)                                      -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="#1F2937"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/incognitoSecurityIndicator"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_lock"
+            android:tint="#34D399"
+            android:contentDescription="Security"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/url_bar_incognito_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp">
+
+            <EditText
+                android:id="@+id/incognitoUrlBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search or enter URL"
+                android:imeOptions="actionGo|flagNoExtractUi"
+                android:inputType="textUri|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="#F9FAFB"
+                android:textColorHint="#6B7280"
+                android:textSize="14sp"
+                android:gravity="center_vertical"/>
+
+            <ImageButton
+                android:id="@+id/incognitoRefresh"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_refresh"
+                android:tint="#9CA3AF"
+                android:contentDescription="Refresh"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- PROGRESS BAR                                              -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <ProgressBar
+        android:id="@+id/incognitoProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:progressTint="#8B5CF6"
+        android:progressBackgroundTint="@android:color/transparent"
+        android:visibility="gone"/>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- WEBVIEW                                                   -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <WebView
+        android:id="@+id/incognitoWebView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#374151"/>
+
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <!-- BOTTOM NAVIGATION (dark)                                  -->
+    <!-- ══════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#1F2937"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/incognitoBtnBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back"
+            android:tint="#9CA3AF"
+            android:alpha="0.35"
+            android:contentDescription="Back"
+            android:padding="14dp"/>
+
+        <ImageButton
+            android:id="@+id/incognitoBtnForward"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_forward"
+            android:tint="#9CA3AF"
+            android:alpha="0.35"
+            android:contentDescription="Forward"
+            android:padding="14dp"/>
+
+        <ImageButton
+            android:id="@+id/incognitoBtnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_home"
+            android:tint="#9CA3AF"
+            android:contentDescription="Home"
+            android:padding="14dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

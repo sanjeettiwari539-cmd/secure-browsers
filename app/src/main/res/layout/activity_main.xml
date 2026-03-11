@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/windowBackground">
+
+    <!-- Top URL Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/toolbarBackground"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <!-- URL bar container -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/url_bar_background"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="4dp"
+            android:layout_marginEnd="6dp">
+
+            <ImageView
+                android:id="@+id/ivLock"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_lock"
+                android:layout_marginEnd="6dp"
+                android:visibility="gone"
+                android:contentDescription="Security"/>
+
+            <EditText
+                android:id="@+id/etUrl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/search_hint"
+                android:inputType="textUri|textNoSuggestions"
+                android:imeOptions="actionGo|flagNoExtractUi"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="@color/urlTextColor"
+                android:hintTextColor="@color/hintColor"
+                android:selectAllOnFocus="true"/>
+
+            <ImageButton
+                android:id="@+id/btnRefresh"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_refresh"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/refresh"
+                android:padding="6dp"/>
+
+        </LinearLayout>
+
+        <!-- Menu button -->
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_more_vert"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu"/>
+
+    </LinearLayout>
+
+    <!-- Loading Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone"
+        android:progressTint="@color/colorPrimary"
+        android:progressBackgroundTint="@android:color/transparent"/>
+
+    <!-- Incognito Banner -->
+    <LinearLayout
+        android:id="@+id/incognitoBanner"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/incognitoBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_shield"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Incognito"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/incognito_active"
+            android:textColor="#E8EAFF"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <!-- WebView -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividerColor"/>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:background="@color/toolbarBackground">
+
+        <ImageButton
+            android:id="@+id/btnBottomBack"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackground"
+            android:alpha="0.35"
+            android:enabled="false"
+            android:contentDescription="@string/back"/>
+
+        <ImageButton
+            android:id="@+id/btnBottomForward"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_arrow_forward"
+            android:background="?attr/selectableItemBackground"
+            android:alpha="0.35"
+            android:enabled="false"
+            android:contentDescription="@string/forward"/>
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/home"/>
+
+        <ImageButton
+            android:id="@+id/btnIncognito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_shield"
+            android:background="?attr/selectableItemBackground"
+            android:alpha="0.6"
+            android:contentDescription="@string/incognito"/>
+
+        <ImageButton
+            android:id="@+id/btnBottomMenu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more_vert"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/menu"/>
+
+    </LinearLayout>
+
+</LinearLayout>
